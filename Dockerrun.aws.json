@@ -1,0 +1,29 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "volumes": [
+    {
+      "name": "mailhog",
+      "host": {
+        "sourcePath": "/var/app/current/mailhog"
+      }
+    }
+  ],
+  "containerDefinitions": [
+    {
+      "name": "mailhog",
+      "image": "mailhog/mailhog",
+      "essential": true,
+      "memory": 128,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 8025
+        },
+        {
+          "hostPort": 1025,
+          "containerPort": 1025
+        }
+      ]
+    }
+  ]
+}
