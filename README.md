@@ -7,11 +7,10 @@ mailhogをAWS Beanstalk Multi container Docker で動かすサンプル
 zip -r eb-mailhog.zip Dockerrun.aws.json
 ```
 
-環境枠：ウェブサーバー。
-プラットフォーム：複数コンテナのDocker。
-アプリケーション： 上で作った eb-mailhog.zip を指定
-
-TCP:80 と TCP:1025 を開放したセキュリティグループを割り当ててください。
+* 環境枠：ウェブサーバー。
+* プラットフォーム：複数コンテナのDocker。
+* アプリケーション： 上で作った eb-mailhog.zip を指定
+* TCP:80 と TCP:1025 を開放したセキュリティグループを割り当ててください。
 
 これで環境を起動。
 
